@@ -9,8 +9,5 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class);
 	}
-	// this is a test for hello
-	// this is more testß
-       // Yasin Esmail
 
 }
