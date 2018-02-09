@@ -41,8 +41,6 @@ subprojects {
     }
     dependencies {
         compile("org.projectlombok:lombok:${lombokVersion}")
-      
-        //testCompile("junit:junit")
         testCompile("org.springframework.boot:spring-boot-starter-test")
     }
 }
