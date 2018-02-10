@@ -10,6 +10,7 @@ public class Application {
 		SpringApplication.run(Application.class);
 		// This is a test one
 		// This is a test two
+		// This is test three
 	}
 
 }
