@@ -1,0 +1,46 @@
+
+apply plugin: 'eclipse'
+//apply plugin: 'java'
+
+buildscript {
+    ext {
+        springBootVersion = "1.5.2.RELEASE"
+        jacksonVersion = "2.8.3"
+        sfl4jVersion = "1.7.16"
+        powerMockVersion = "1.6.6"
+        springfoxSwaggerVersion = "2.6.0"
+        validationApiVersion = "1.1.0.Final"
+        groovyVersion = "2.4.11"
+        spockVersion = "1.0-groovy-2.4"
+        lombokVersion = "1.16.16"
+        mapstructVersion = "1.2.0.Beta1"
+        mysqlVersion = "6.0.6"
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    group = 'com.medical.user'
+    version = '1.0.0.1-SNAPSHOT'
+    jar {
+        manifest.attributes provider: 'gradle'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    dependencies {
+        compile("org.projectlombok:lombok:${lombokVersion}")
+        testCompile("org.springframework.boot:spring-boot-starter-test")
+    }
+}
