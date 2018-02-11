@@ -8,13 +8,6 @@ public class Application {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class);
-		// comment f1
-		// comment f2
-		// comment f3
-		// comment f4
-		// comment f5
-		// comment f2 1
-		// comment f2 2
 	}
 
 }
